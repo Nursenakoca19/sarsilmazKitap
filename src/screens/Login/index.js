@@ -4,7 +4,7 @@ import styles from './styles';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import router from '../../constants/router';
 
-const bgImage = require('../../assets/tema.jpeg');
+const bgImage = require('../../assets/tema2.jpeg');
 
 export default function LoginScreen({navigation}) {
   const [identityNumber, addidentityNumber] = useState('');
@@ -23,7 +23,7 @@ export default function LoginScreen({navigation}) {
 
   return (
     <>
-      <ImageBackground source={bgImage} resizeMode="stretch" style={{height: '100%' ,width:'100%',flex:1}}>
+      <ImageBackground source={bgImage} resizeMode="cover" style={{height: '100%' ,width:'100%',flex:1}}>
         <View
           style={{
             alignItems: 'center',
@@ -33,16 +33,16 @@ export default function LoginScreen({navigation}) {
         <StatusBar barStyle={'dark-content'} />
         <SafeAreaView style={styles.root}>
           <ScrollView>
-            <View style={{flex: 0.1, padding: 30, marginTop: '5%'}}>
+            <View style={{flex: 1, padding: 30, justifyContent:'center',alignContent:'center',marginTop:'20%'}}>
               <Text
                 style={{
                   textAlign: 'left',
                   color: 'white',
-                  fontSize: 18,
+                  fontSize: 22,
                   fontWeight: '400',
                   left: 10,
                 }}>
-                Kimlik Numarası
+                Email
               </Text>
 
               <View style={styles.inputWrap}>
@@ -51,7 +51,7 @@ export default function LoginScreen({navigation}) {
                   autoCapitalize="none"
                   value={identityNumber}
                   keyboardType={'default'}
-                  placeholder="Kimlik Numarası"
+                  placeholder="Email"
                   onChangeText={text => {
                     addidentityNumber(text);
                   }}
@@ -63,7 +63,7 @@ export default function LoginScreen({navigation}) {
                 style={{
                   textAlign: 'left',
                   color: 'white',
-                  fontSize: 18,
+                  fontSize: 22,
                   fontWeight: '400',
                   left: 10,
                 }}>
@@ -85,7 +85,7 @@ export default function LoginScreen({navigation}) {
                       justifyContent: 'center',
                       alignContent: 'center',
                       alignItems: 'center',
-                      backgroundColor: '#2769F6',
+                      backgroundColor: 'purple',
                       height: 50,
                       borderRadius: 20,
                       marginTop: 10,
@@ -93,7 +93,7 @@ export default function LoginScreen({navigation}) {
                     success
                     block
                     onPress={onPressLogin}>
-                    <Text style={{color: 'white', fontSize: 18}}>Giriş Yap</Text>
+                    <Text style={{color: 'white', fontSize: 22}}>Giriş Yap</Text>
                   </TouchableOpacity>
                 </>
               )}
