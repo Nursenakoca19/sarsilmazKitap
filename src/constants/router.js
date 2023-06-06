@@ -1,4 +1,5 @@
 export default {
-  home: 'Home',
-  login: 'Login',
+  home: "Home",
+  login: "Login",
+  giris: "Giris",
 };

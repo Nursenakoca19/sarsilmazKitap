@@ -3,11 +3,10 @@ import {Text, View, ImageBackground, Image, SafeAreaView, ScrollView, TextInput,
 import styles from './styles';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import router from '../../constants/router';
-import navigationService from '../../services/navigationService';
 
 const bgImage = require('../../assets/tema2.jpeg');
 
-export default function LoginScreen({navigation}) {
+export default function girisScreen({navigation}) {
   const [identityNumber, addidentityNumber] = useState('');
   const [password, addPassword] = useState('');
   const [loading, addLoading] = useState(false);
@@ -18,10 +17,7 @@ export default function LoginScreen({navigation}) {
     Alert.alert('Lütfen gerekli alanları giriniz', 'Kimlil numarası ve şifre alanları boş geçilemez', [{text: 'Kapat'}]);
   };
 
-  function onPressLogin() {
-    navigationService.navigate(router.giris);
-
-  }
+  function onPressLogin() {}
 
   const blur = Platform.OS == 'ios' ? 3 : 2;
 
@@ -97,7 +93,7 @@ export default function LoginScreen({navigation}) {
                     success
                     block
                     onPress={onPressLogin}>
-                    <Text style={{color: 'white', fontSize: 22}}>Giriş Yap</Text>
+                    <Text style={{color: 'white', fontSize: 22}}>Girişşşşşşşş</Text>
                   </TouchableOpacity>
                 </>
               )}
